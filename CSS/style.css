@@ -1,0 +1,122 @@
+/*Checklist: 
+1. Four different kinds of buttons
+2. Two different kinds of nav
+3. Four different typographic treatments
+4. Two different kinds of media cards
+*/
+
+html {
+  font-size: 100%;
+  margin-top: 0;
+}
+
+body {
+    background-color: #2b2a2a;
+}
+
+.buttons {
+    grid-template-rows: auto;
+    padding: 2em;
+    margin-left: 5em;
+    margin-right: 5em;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+a.style1 {
+    border: 2px solid #4c4c4c;
+    padding: .4em 1em .4em 1em;
+    text-decoration: none;
+    color: rgb(189, 189, 189);
+    background-color: #4c4c4c;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 80%;
+    color:blanchedalmond;
+}
+a.style1:hover, a.style1:active {
+border: 2px solid #4c4c4c;
+padding: .4em 1em .4em 1em;
+text-decoration: none;
+color: #08264d;
+border-width: 3px;
+border-color: rgb(17, 15, 15);
+transition: 0.25s ease;
+}
+
+a.style2 {
+    border: 2px solid #4c4c4c;
+    padding: .4em 1em .4em 1em;
+    text-decoration: none;
+    color: rgb(189, 189, 189);
+    border-radius: 15px;
+    border-width: 3px;
+    background-color: #4c4c4c;
+    border-color: rgb(189, 189, 189);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 80%;
+    color:aquamarine;
+    background-size: 475%;
+}
+a.style2:hover, a.style2:active {
+    border: 2px solid #4c4c4c;
+    padding: .4em 1em .4em 1em;
+    text-decoration: none;
+    color: #2e2d2d;
+    color:aquamarine;
+    transition: 0.25s ease;
+  }
+
+a.style4 {
+    color:azure;
+}
+
+
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    }
+    .container input {
+    position: absolute;
+    opacity: 0;
+    }
+    .radio_class {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 100%;
+    }
+    .container:hover input ~ .radio_class {
+    background-color: #747d92;
+    }
+    .container input:checked ~ .radio_class {
+    background-color: #0e11bb;
+    height: 20px;
+    width: 20px;
+    border-radius: 80%;
+    }
+    .container .radio_class:after {
+    top: 10px;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 80%;
+    background: white;
+    }
+
+/*-- changes header and article width on small screens --*/
+@media screen and (max-width: 768px) {
+  header {width: 96%;}
+  article {width: 96%;}
+}
